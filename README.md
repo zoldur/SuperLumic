@@ -29,7 +29,7 @@ Alias Address Privkey TxHash Output_index
 * TxHash: **First value from Step 6** 
 * Output index:  **Second value from Step 6** It can be **0** or **1**
 9. Click OK and exit the Wallet.
-10. Open Jolt Gas Wallet, go to **Masternode Tab**. If you tab is not shown, please enable it from: **Settings - Options - Wallet - Show Masternodes Tab**
+10. Open Super Lumic Wallet, go to **Masternode Tab**. If you tab is not shown, please enable it from: **Settings - Options - Wallet - Show Masternodes Tab**
 11. Click **Update status** to see your node. If it is not shown, close the wallet and start it again.
 10. Click **Start All**
 11. If you are not able to see your **Masternode**, try to close and open your desktop wallet.
@@ -37,8 +37,9 @@ Alias Address Privkey TxHash Output_index
 
 ## Usage:
 ```
-superlumicd getinfo
-superlumicd masternode status
+superlumic-cli getinfo
+superlumic-cli masternode status
+superlumic-cli mnsync status
 ```
 
 Also, if you want to check/start/stop **Super Lumic** , run one of the following commands as **root**:
