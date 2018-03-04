@@ -55,7 +55,7 @@ systemctl is-enabled SuperLumic #To check whetether SuperLumic service is enable
 
 Any donation is highly appreciated.  
 
-
+**SLC**: Sc31TDZUHgQ8n9C5yRtu2DBowwaiAkTKNp  
 **BTC**: 1AfsQsWfbcT2mdjRAYehuB2zegMPPG7de9  
 **ETH**: 0x39d10fe57611c564abc255ffd7e984dc97e9bd6d  
 **LTC**: LXrWbfeejNQRmRvtzB6Te8yns93Tu3evGf
