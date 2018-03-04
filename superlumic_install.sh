@@ -4,11 +4,10 @@ TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='superlumic.conf'
 CONFIGFOLDER='/root/.superlumiccore'
 COIN_DAEMON='/usr/local/bin/superlumicd'
-COIN_CLI='/usr/local/bin/superlumicd'
+COIN_CLI='/usr/local/bin/superlumic-cli'
 COIN_REPO='https://github.com/SuperLumicCoin/SuperLumic.git'
 COIN_NAME='SuperLumic'
 COIN_PORT=13715
-RPCPORT=2334
 
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -30,7 +29,7 @@ function compile_node() {
   compile_error
   make install
   cd -
-  #rm -rf $TMP_FOLDER >/dev/null 2>&1
+  rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
 
