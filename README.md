@@ -26,8 +26,8 @@ Alias Address Privkey TxHash Output_index
 * Alias: **MN1**
 * Address: **VPS_IP:PORT**
 * Privkey: **Masternode Private Key**
-* TxHash: **First value from Step 6**
-* Output index:  **Second value from Step 6**
+* TxHash: **First value from Step 6** 
+* Output index:  **Second value from Step 6** It can be **0** or **1**
 9. Click OK and exit the Wallet.
 10. Open Jolt Gas Wallet, go to **Masternode Tab**. If you tab is not shown, please enable it from: **Settings - Options - Wallet - Show Masternodes Tab**
 11. Click **Update status** to see your node. If it is not shown, close the wallet and start it again.
