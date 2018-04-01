@@ -8,6 +8,7 @@ COIN_CLI='/usr/local/bin/superlumic-cli'
 COIN_REPO='https://github.com/SuperLumicCoin/SuperLumic.git'
 COIN_NAME='SuperLumic'
 COIN_PORT=13715
+RPC_PORT=13716
 
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -82,6 +83,7 @@ function create_config() {
   cat << EOF > $CONFIGFOLDER/$CONFIG_FILE
 rpcuser=$RPCUSER
 rpcpassword=$RPCPASSWORD
+rpcport=$RPC_PORT
 rpcallowip=127.0.0.1
 listen=1
 server=1
