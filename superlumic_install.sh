@@ -5,7 +5,8 @@ CONFIG_FILE='superlumic.conf'
 CONFIGFOLDER='/root/.superlumiccore'
 COIN_DAEMON='/usr/local/bin/superlumicd'
 COIN_CLI='/usr/local/bin/superlumic-cli'
-COIN_REPO='https://github.com/SuperLumicCoin/SuperLumic.git'
+COIN_TGZ='https://github.com/SuperLumicCoin/SuperLumic/releases/download/v0.0.1.1/superlumic-lin64.tar.gz'
+COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='SuperLumic'
 COIN_PORT=13715
 RPC_PORT=13716
@@ -18,18 +19,15 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-function compile_node() {
-  echo -e "Prepare to compile $COIN_NAME"
-  git clone  $COIN_REPO $TMP_FOLDER
-  cd $TMP_FOLDER
-  ./autogen.sh
+function download_node() {
+  echo -e "Prepare to download ${GREEN}$COIN_NAME${NC}."
+  cd $TMP_FOLDER >/dev/null 2>&1
+  wget  -q $COIN_TGZ
   compile_error
-  ./configure
-  compile_error
-  make
-  compile_error
-  make install
-  cd -
+  tar xvf $COIN_ZIP >/dev/null 2>&1
+  chmod +x superlumicd superlumic-cli
+  cp superlumicd superlumic-cli /usr/local/bin
+  cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
@@ -265,7 +263,6 @@ clear
 
 checks
 prepare_system
-create_swap
-compile_node
+download_node
 setup_node
 
